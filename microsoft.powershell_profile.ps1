@@ -1,10 +1,10 @@
 #docker
-function DockerLs {
+function CustomDocker {
     param($p1)
-    if($p1 -eq "cls"){
-        docker container ls -a
-    }else{
-        docker
+    switch($p1){
+        "cls" {docker container ls -a}
+        "ils" {docker images ls -a}
+        default {docker}
     }
 }
 
@@ -28,4 +28,4 @@ function LinuxNano {
 Set-Alias touch LinuxTouch
 Set-Alias cat LinuxCat -Option AllScope
 Set-Alias nano LinuxNano
-Set-Alias d DockerLs 
+Set-Alias d CustomDocker 
