@@ -34,4 +34,4 @@ Set-Alias touch LinuxTouch
 Set-Alias cat LinuxCat -Option AllScope
 Set-Alias nano LinuxNano
 Set-Alias d CustomDocker 
-Set-Alias rmdir RemoveDirectoryRecursive
+Set-Alias rmdir RemoveDirectoryRecursive -Option AllScope
