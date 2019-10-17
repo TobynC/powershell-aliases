@@ -24,8 +24,14 @@ function LinuxNano {
     notepad.exe $p1
 }
 
+function RemoveDirectoryRecursive{
+    param($p1)
+    Remove-Item -Recurse -Force $p1
+}
+
 #aliases
 Set-Alias touch LinuxTouch
 Set-Alias cat LinuxCat -Option AllScope
 Set-Alias nano LinuxNano
 Set-Alias d CustomDocker 
+Set-Alias rmdir RemoveDirectoryRecursive
